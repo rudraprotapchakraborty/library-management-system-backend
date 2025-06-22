@@ -1,0 +1,33 @@
+{
+  "name": "library-management-api",
+  "version": "1.0.0",
+  "description": "Library Management API built with Express, TypeScript, and MongoDB",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "lint": "eslint --ext .ts src"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "mongodb",
+    "mongoose",
+    "library",
+    "api"
+  ],
+  "author": "Rudra Protap Chakraborty",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.4",
+    "express": "^4.19.2",
+    "mongoose": "^8.0.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.3.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.4"
+  }
+}
