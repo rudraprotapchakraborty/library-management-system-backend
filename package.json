@@ -20,11 +20,13 @@
   "author": "Rudra Protap Chakraborty",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.4",
     "express": "^4.19.2",
     "mongoose": "^8.0.4"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^4.17.21",
     "@types/node": "^20.3.3",
     "ts-node-dev": "^2.0.0",
