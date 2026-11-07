@@ -9,8 +9,8 @@ const required = (name: string): string => {
 
 const NODE_ENV = process.env.NODE_ENV || "development";
 
-const DEFAULT_CLIENT_URL = "http://localhost:3000";
-const LIVE_API_URL = "https://library-management-system-backend.vercel.app";
+const DEFAULT_CLIENT_URL = "http://localhost:3000,https://library-management-system-frontend-ten-chi.vercel.app";
+const LIVE_API_URL = "https://library-management-system-backend-six.vercel.app";
 
 const clientOrigins = (process.env.CLIENT_URL || DEFAULT_CLIENT_URL).split(",").map((o) => o.trim()).filter(Boolean);
 

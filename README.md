@@ -1,5 +1,8 @@
 # Shelfwise · Library Management System (backend)
 
+**Live API:** https://library-management-system-backend-six.vercel.app  
+**Live site:** https://library-management-system-frontend-ten-chi.vercel.app
+
 REST API for **Shelfwise**, a library management system: a book catalogue, borrowing and returning, readers and librarians. Built with **Express 5**, **TypeScript** and **MongoDB (Mongoose)**. The site that uses it is [library-management-system-frontend](https://github.com/rudraprotapchakraborty/library-management-system-frontend).
 
 It grew out of a small assignment API (books + borrow summary). The original rules are kept; sign-in, roles and a reader's own loans were added around them.
@@ -45,7 +48,7 @@ npm run seed             # 28 Wikipedia books, 5 demo accounts, sample loans
 npm run dev              # http://localhost:5000
 ```
 
-Build for production: `npm run build && npm start`. Deployed on Vercel through `api/index.ts`.
+Build for production: `npm run build && npm start`. Deployed on Vercel through `api/index.ts`. On Vercel set every variable below; `CLIENT_URL` must include the live site (https://library-management-system-frontend-ten-chi.vercel.app).
 
 ### Environment (`.env`, git-ignored)
 
