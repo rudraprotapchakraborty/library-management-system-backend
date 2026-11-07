@@ -1,17 +1,45 @@
-import express from 'express';
-import cors from 'cors';
-import bookRoutes from './routes/book.routes';
-import borrowRoutes from './routes/borrow.routes';
-import { errorHandler } from './middlewares/error.middleware';
-
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import morgan from "morgan";
+import routes from "./routes";
+import { env } from "./config/env";
+import { errorMiddleware, notFoundMiddleware } from "./core/error-middleware";
 
 const app = express();
-app.use(cors()); 
-app.use(express.json());
 
-app.use('/api/books', bookRoutes);
-app.use('/api/borrow', borrowRoutes);
+app.disable("x-powered-by");
+app.set("trust proxy", 1);
 
-app.use(errorHandler);
+app.use(helmet());
+
+const allowedOrigins = env.CLIENT_URL.split(",").map((o) => o.trim());
+app.use(
+  cors({
+    origin: (origin, cb) => {
+      // Allow non-browser clients (no Origin header) and whitelisted origins
+      if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
+      return cb(null, false);
+    },
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization", "X-Client-Id"],
+  })
+);
+
+app.use(morgan(env.isProduction ? "combined" : "dev"));
+app.use(express.json({ limit: "1mb" }));
+
+app.get("/health", (_req, res) => {
+  res.json({ status: "ok" });
+});
+
+app.use("/api", routes);
+
+app.get("/", (_req, res) => {
+  res.send("Shelfwise Library API running.");
+});
+
+app.use(notFoundMiddleware);
+app.use(errorMiddleware);
 
 export default app;
