@@ -1,7 +1,23 @@
-# Shelfwise · Library Management System (backend)
+<div align="center">
 
-**Live API:** https://library-management-system-backend-six.vercel.app  
-**Live site:** https://library-management-system-frontend-ten-chi.vercel.app
+# 📚 Library Management System
+
+**Library website: search the catalogue, borrow and return books, with a librarian dashboard.**
+
+[**Live demo**](https://library-management-system-frontend-ten-chi.vercel.app/) · [Frontend](https://github.com/rudraprotapchakraborty/library-management-system-frontend) · [API status](https://library-management-system-backend-six.vercel.app) · [Portfolio](https://rudraprotapchakraborty.com/projects)
+
+![Node.js](https://img.shields.io/badge/Node.js-3c873a?style=for-the-badge&logo=nodedotjs&logoColor=ffffff) ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=ffffff) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=for-the-badge&logo=typescript&logoColor=ffffff) ![MongoDB](https://img.shields.io/badge/MongoDB-47a248?style=for-the-badge&logo=mongodb&logoColor=ffffff) ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=ffffff) ![Google Sign--In](https://img.shields.io/badge/Google_Sign--In-4285f4?style=for-the-badge&logo=google&logoColor=ffffff)
+
+<a href="https://library-management-system-frontend-ten-chi.vercel.app/"><img src="https://i.ibb.co/842QNcJh/library-management-system.webp" alt="Library Management System: home page" width="880"></a>
+
+</div>
+
+> The REST API of **Shelfwise**.
+>
+> - Catalogue search by title, author or ISBN with genre filters
+> - Borrow copies with a due date and return them from a loans page
+> - Librarian dashboard: books, borrowed-books summary, active loans and readers
+> - Availability rules enforced on the server
 
 REST API for **Shelfwise**, a library management system: a book catalogue, borrowing and returning, readers and librarians. Built with **Express 5**, **TypeScript** and **MongoDB (Mongoose)**. The site that uses it is [library-management-system-frontend](https://github.com/rudraprotapchakraborty/library-management-system-frontend).
 
@@ -66,3 +82,11 @@ Book descriptions and cover images come from Wikipedia (CC BY-SA); ISBNs are gen
 ## Scripts
 
 `npm run dev` · `npm run build` · `npm start` · `npm run typecheck` · `npm run seed` · `npm run seed:clear`
+
+---
+
+<div align="center">
+
+Made by **[Rudra Protap Chakraborty](https://rudraprotapchakraborty.com)** · [Portfolio](https://rudraprotapchakraborty.com) · [GitHub](https://github.com/rudraprotapchakraborty)
+
+</div>
